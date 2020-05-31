@@ -1,4 +1,4 @@
-package com.palgle.nightdancea.utils;
+package com.palgle.utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;

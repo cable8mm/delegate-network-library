@@ -94,9 +94,7 @@ public class SCManager extends AsyncTask<String, String, String> {
                 throw new IOException(statusLine.getReasonPhrase());
             }
         } catch (ClientProtocolException e) {
-            // TODO Handle problems..
         } catch (IOException e) {
-            // TODO Handle problems..
         }
         return responseString;
     }
@@ -122,13 +120,12 @@ public class SCManager extends AsyncTask<String, String, String> {
                         AlertDialog.Builder bld = new AlertDialog.Builder(_context);
                         bld.setTitle("Logout");
                         bld.setMessage("Logout because another device logined.");
-                        bld.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                        bld.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface arg0, int arg1) {
                                 try {
                                     _delegate.scPostResult(_tag, response);
                                 } catch (JSONException e) {
-                                    // TODO Auto-generated catch block
                                     e.printStackTrace();
                                 }
                             }
@@ -142,7 +139,6 @@ public class SCManager extends AsyncTask<String, String, String> {
                 }
 
             } catch (JSONException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
 
